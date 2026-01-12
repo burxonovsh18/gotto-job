@@ -1,9 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
 
-Route::view('/', 'pages.index');
-Route::view('/about', 'pages.about');
-Route::view('/contact', 'pages.contact');
-Route::view('/jobs', 'pages.job-listings');
-Route::view('/jobs/{id}', 'pages.job-details');
+Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/job', [JobController::class, 'index'])->name('jobs.index');
+Route::get('/job', [JobController::class, 'show'])->name('jobs.show');
+Route::get('/contact', [ContactController::class, 'index']);
