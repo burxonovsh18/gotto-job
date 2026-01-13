@@ -17,23 +17,23 @@
 
                             <div class="mb-3">
                                 <label>Name</label>
-                                <input type="text"  id ='name' name="name" value='name' class="form-control" placeholder="Your name" required>
+                                <input type="text"  id ='name' name="name"  class="form-control" placeholder="Your name" required>
                             </div>
 
                             <div class="mb-3">
                                 <label>Username</label>
-                                <input type="username" id='username' value="username" name="username" class="form-control" placeholder="Username"
+                                <input type="username" id='username' name="username" class="form-control" placeholder="Username"
                                     required>
                             </div>
 
                             <div class="mb-3">
                                 <label>Email</label>
-                                <input type="email" id="email" value="email" name="email" class="form-control" placeholder="Email address" required>
+                                <input type="email" id="email"  name="email" class="form-control" placeholder="Email address" required>
                             </div>
 
                             <div class="mb-3">
                                 <label>Password</label>
-                                <input type="password" id ='password' value="password" name="password" class="form-control" placeholder="Password" required>
+                                <input type="password" id ='password'  name="password" class="form-control" placeholder="Password" required>
                             </div>
 
                             <div class="mb-3">
@@ -43,9 +43,7 @@
                             </div>
 
                             <div class="d-grid">
-                                <button class="btn btn-primary">
-                                    Register
-                                </button>
+                                <button type="submit">Register</button>
                             </div>
                         </form>
 
