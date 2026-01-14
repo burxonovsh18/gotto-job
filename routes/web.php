@@ -23,3 +23,7 @@ Route::get('/register', [AuthController::class, 'registerForm'])->name('register
 
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
+Route::get('/profile/settings', [ProfileController::class, 'settings'])->name('profile.settings');
+Route::post('/profile/settings', [ProfileController::class, 'saveSettings'])->name('profile.settings.save');
+
+
