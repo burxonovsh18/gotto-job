@@ -10,6 +10,7 @@ use App\Http\Requests\ProfileUpdateRequest;
 class ProfileController extends Controller
 {
     public function index(){
+        $user= Auth::user();
         return view('profile.index');
     }
     public function edit(){
@@ -24,6 +25,7 @@ class ProfileController extends Controller
         $user->email = $request->email;
         $user->save();
     }
-
-
+    public function settings(){
+        return view('profile.settings');
+    }
 }

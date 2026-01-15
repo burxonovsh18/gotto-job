@@ -15,7 +15,6 @@ Route::prefix('job')->group(function(){
     Route::get('{job}', [JobController::class, 'show']);
 });
 
-Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
 
 
 Route::get('/login', [AuthController::class, 'loginForm'])->name('loginForm');
@@ -24,6 +23,8 @@ Route::get('/register', [AuthController::class, 'registerForm'])->name('register
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::get('/profile/settings', [ProfileController::class, 'settings'])->name('profile.settings');
-Route::post('/profile/settings', [ProfileController::class, 'saveSettings'])->name('profile.settings.save');
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
+Route::get('/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::post('/edit', [ProfileController::class, 'update'])->name('profile.update');
 
 
