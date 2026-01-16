@@ -7,13 +7,13 @@
         <form method="POST" action="{{ route('profile.update') }}">
             @csrf
 
-            <label>Name</label>
-            <input type="text" name="name" value="{{ $user->name }}">
-
-            <label>Email</label>
-            <input type="email" name="email" value="{{ $user->email }}">
-
-            <button type="submit">Save</button>
+            <input type="text" name="name" value="{{ auth()->user()->name }}" placeholder="Name">
+            <br>
+            <br>
+            <input type="email" name="email" value="{{auth()->user()->email }}" placeholder="Email">
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary">Save</button>
         </form>
     </div>
 @endsection
