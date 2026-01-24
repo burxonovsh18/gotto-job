@@ -9,6 +9,8 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/jobs', [JobController::class , 'index'])->name('jobs');
 Route::get('/jobs/show', [JobController::class, 'show'])->name('jobs.show');
+Route::get('/jobs/create', [JobController::class ,'create'])->name('jobs.create');
+Route::post('jobs/store', [JobController::class, 'store'])->name('jobs.store');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/', [AuthController::class, 'loginForm'])->name('loginForm');
 Route::get('/register', [AuthController::class, 'registerForm'])->name('registerForm');

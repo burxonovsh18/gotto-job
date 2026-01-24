@@ -7,7 +7,9 @@
     <section class="section-padding">
         <div class="container">
             <h2>Available Jobs</h2>
-
+            <a href="{{ route('jobs.create') }}" class="btn btn-primary">Create Job</a>
+            <br>
+            <br>
             <div class="job-listing">
                 <h5>Web Developer</h5>
                 <p>Location: Remote</p>

@@ -35,6 +35,8 @@ class JobController extends Controller
         $job->company_name = $request->company_name;
         $job->job_type =$request->job_type;
         $job->store();
+
+        return view('pages.jobs.index');
     }
 
     /**
