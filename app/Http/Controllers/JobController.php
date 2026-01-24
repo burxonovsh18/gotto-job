@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Job;
 use Illuminate\Http\Request;
+use App\Http\Requests\JobRequest;
+use App\Http\Requests\JobStoreRequest;
 
 class JobController extends Controller
 {
@@ -11,7 +14,7 @@ class JobController extends Controller
      */
     public function index()
     {
-        return ('pages.job.index');
+        return view('pages.jobs.index');
     }
 
     /**
@@ -25,9 +28,13 @@ class JobController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(JobStoreRequest $request)
     {
-        
+        $job = new Job;
+        $job->title = $request->title;
+        $job->company_name = $request->company_name;
+        $job->job_type =$request->job_type;
+        $job->store();
     }
 
     /**
@@ -35,7 +42,9 @@ class JobController extends Controller
      */
     public function show(string $id)
     {
-        return ('pages.jobs.index');
+        $jobs = Job::findOrFail($id);
+
+        return view('pages.jobs.index', compact($jobs));
     }
 
     /**
