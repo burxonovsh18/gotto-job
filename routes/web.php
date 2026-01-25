@@ -5,8 +5,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ContactController;
 
+Route::get('/about', function(){
+    return view('pages.about');
+});
+Route::get('contact', function(){
+    return view('pages.contact');
+});
 Route::get('/jobs', [JobController::class , 'index'])->name('jobs');
 Route::get('/jobs/show', [JobController::class, 'show'])->name('jobs.show');
 Route::get('/jobs/create', [JobController::class ,'create'])->name('jobs.create');

@@ -31,17 +31,15 @@ class JobController extends Controller
     public function store(JobStoreRequest $request)
     {
         $job = new Job;
-        $job->title = $request->title;
+        $job->job_title = $request->job_title;
         $job->company_name = $request->company_name;
         $job->job_type =$request->job_type;
+        $job->JOb_salary = $request->job_salary;
+        $job->job_description= $request->job_description;
         $job->store();
 
-        return view('pages.jobs.index');
+        return redirect()->back();
     }
-
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
         $jobs = Job::findOrFail($id);

@@ -22,9 +22,11 @@ class JobStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title'=>'required',
+            'job_title'=>'required',
             'company_name'=>'required',
-            'job_type'=>'required'
+            'job_type'=>'required',
+            'job_description'=>'required',
+            'job_salary'=>'required|numeric',
         ];
     }
 }
