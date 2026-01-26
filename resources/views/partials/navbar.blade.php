@@ -20,5 +20,8 @@
 
             </ul>
         </div>
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.rml0smmpWgT5z_DXgXReGgHaHa?pid=ImgDet&w=183&h=183&c=7&dpr=1.3&o=7&rm=3" alt="logo" height="40">
+        </a>
     </div>
 </nav>
